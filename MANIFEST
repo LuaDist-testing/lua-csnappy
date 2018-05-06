@@ -1,0 +1,17 @@
+CHANGES
+COPYRIGHT
+MANIFEST
+Makefile
+README.md
+csnappy/csnappy.h
+csnappy/csnappy_compress.c
+csnappy/csnappy_decompress.c
+csnappy/csnappy_internal.h
+csnappy/csnappy_internal_userspace.h
+doc/Makefile
+doc/index.html
+doc/snappy.html
+lsnappy.c
+rockspec.in
+test/00-require.t
+test/01-snappy.t

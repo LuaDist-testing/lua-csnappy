@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>lua-csnappy - Homepage</title>
+    <link rel="stylesheet" href="http://www.keplerproject.org/doc.css" type="text/css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="Author" content="Fran&ccedil;ois Perrad"/>
+  <meta http-equiv="Language" content="en"/>
+  <meta http-equiv="Description" content="Homepage of lua-csnappy"/>
+  <meta http-equiv="Keywords" content="lua, Snappy, compressor, fast, decompressor"/>
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="product">
+  <div id="product_logo">
+    <a href="http://www.lua.org">
+      <img alt="Lua" src="http://www.andreas-rozek.de/Lua/Lua-Logo_128x128.png"/>
+    </a>
+  </div>
+  <div id="product_name"><big><strong>lua-csnappy</strong></big></div>
+  <div id="product_description">a fast compressor/decompressor</div>
+</div> <!-- id="product" -->
+
+<div id="main">
+
+<div id="navigation">
+<h1>lua-csnappy</h1>
+  <ul>
+    <li><strong>Home</strong>
+      <ul>
+        <li><a href="index.html#overview">Overview</a></li>
+        <li><a href="index.html#references">References</a></li>
+        <li><a href="index.html#status">Status</a></li>
+        <li><a href="index.html#download">Download</a></li>
+        <li><a href="index.html#installation">Installation</a></li>
+        <li><a href="index.html#test">Test</a></li>
+        <li><a href="index.html#license">License</a></li>
+      </ul>
+    </li>
+    <li><a href="snappy.html">module <code>snappy</code></a>
+      <ul>
+        <li><a href="snappy.html#reference">Reference</a></li>
+        <li><a href="snappy.html#examples">Examples</a></li>
+      </ul>
+    </li>
+    <li><a href="http://fperrad.github.com/lua-csnappy">Project</a>
+      <ul>
+        <li><a href="http://github.com/fperrad/lua-csnappy/">Git</a></li>
+        <li><script type="text/javascript" src="http://www.ohloh.net/p/606393/widgets/project_thin_badge.js"></script></li>
+      </ul>
+    </li>
+  </ul>
+</div> <!-- id="navigation" -->
+
+<div id="content">
+
+<h2><a name="overview"></a>Overview</h2>
+
+<p>lua-csnappy is a binding of the <code>csnappy</code> library
+which implements the Google's Snappy (de)compressor.</p>
+
+<p>Snappy uses a <a href="http://en.wikipedia.org/wiki/LZ77_and_LZ78">LZ77</a>-type
+algorithm with a fixed, byte-oriented encoding.</p>
+
+<h2><a name="references"></a>References</h2>
+
+<p>The <code>csnappy</code> library is available at
+<a href="http://github.com/zeevt/csnappy">http://github.com/zeevt/csnappy</a>.</p>
+
+<p>The specification and the original C++ implementation of Snappy are available at
+<a href="http://code.google.com/p/snappy/">http://code.google.com/p/snappy/</a>.</p>
+
+<h2><a name="status"></a>Status</h2>
+
+<p>lua-csnappy is in beta stage.</p>
+
+<p>It's developed for Lua 5.1 &amp; 5.2.</p>
+
+<h2><a name="download"></a>Download</h2>
+
+<p>lua-csnappy source can be downloaded from
+<a href="http://github.com/fperrad/lua-csnappy/downloads/">GitHub</a>.</p>
+
+<h2><a name="installation"></a>Installation</h2>
+
+<p>lua-csnappy is available via LuaRocks:</p>
+
+<pre class="example">
+luarocks install lua-csnappy
+</pre>
+
+<p>or manually, with:</p>
+
+<pre class="example">
+make install
+</pre>
+
+<h2><a name="test"></a>Test</h2>
+
+<p>The test suite requires the module
+<a href="http://fperrad.github.com/lua-TestMore">lua-TestMore</a>.</p>
+
+<pre class="example">
+make test
+</pre>
+
+<h2><a name="license"></a>Copyright and License</h2>
+
+<p>Copyright &copy; 2012 Fran&ccedil;ois Perrad
+<a href="http://www.ohloh.net/accounts/4780?ref=Rank">
+  <img alt="ohloh profile for Fran&ccedil;ois Perrad"
+       height="24" width="32" style="border-width:0"
+       src="http://www.ohloh.net/accounts/4780/widgets/account_rank.gif"/>
+</a>
+<a href="http://www.linkedin.com/in/fperrad">
+  <img alt="View Fran&ccedil;ois Perrad's profile on LinkedIn"
+       width="80" height="15" style="border-width:0"
+       src="http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.gif"/>
+</a>
+</p>
+
+<p>This library is licensed under the terms of the BSD license,
+like csnappy &amp; Snappy.</p>
+
+</div> <!-- id="content" -->
+
+</div> <!-- id="main" -->
+
+<div id="about">
+</div> <!-- id="about" -->
+
+</div> <!-- id="container" -->
+
+</body>
+</html>
