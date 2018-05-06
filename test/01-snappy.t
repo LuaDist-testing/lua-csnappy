@@ -30,7 +30,7 @@ local decompressed = snappy.decompress(compressed)
 is(decompressed, input)
 
 local len = 1
-for i = 0, 15 do
+for _ = 0, 15 do
     input = string.rep('0', len)
     compressed = snappy.compress(input)
     decompressed = snappy.decompress(compressed)

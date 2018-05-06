@@ -99,11 +99,11 @@ LUALIB_API int luaopen_snappy(lua_State *L)
 #else
     luaL_register(L, "snappy", snappy);
 #endif
-    lua_pushliteral (L, "Copyright (C) 2012-2014 Francois Perrad");
+    lua_pushliteral (L, "Copyright (C) 2012-2015 Francois Perrad");
     lua_setfield(L, -2, "_COPYRIGHT");
     lua_pushliteral (L, "lua-csnappy: a fast compressor/decompressor");
     lua_setfield(L, -2, "_DESCRIPTION");
-    lua_pushliteral (L, "0.1.2");
+    lua_pushliteral (L, "0.1.3");
     lua_setfield(L, -2, "_VERSION");
     return 1;
 }

@@ -10,6 +10,7 @@ csnappy/csnappy_decompress.c
 csnappy/csnappy_internal.h
 csnappy/csnappy_internal_userspace.h
 doc/Makefile
+doc/doc.css
 doc/index.html
 doc/snappy.html
 lsnappy.c

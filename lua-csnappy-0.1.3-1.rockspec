@@ -1,17 +1,17 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = 'lua-csnappy'
-version = '0.1.2-1'
+version = '0.1.3-1'
 -- LuaDist source
 source = {
-  tag = "0.1.2-1",
+  tag = "0.1.3-1",
   url = "git://github.com/LuaDist-testing/lua-csnappy.git"
 }
 -- Original source
 -- source = {
---     url = 'http://sites.google.com/site/fperrad/lua-csnappy-0.1.2.tar.gz',
---     md5 = '58ca02b84592572e010f4d8300b14150',
---     dir = 'lua-csnappy-0.1.2',
+--     url = 'http://sites.google.com/site/fperrad/lua-csnappy-0.1.3.tar.gz',
+--     md5 = '60163422c2b0d71338880e54d17ee8dc',
+--     dir = 'lua-csnappy-0.1.3',
 -- }
 description = {
     summary = "a fast compressor/decompressor",

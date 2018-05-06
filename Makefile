@@ -109,10 +109,16 @@ dist: $(TARBALL)
 rockspec: $(TARBALL)
 	perl -e '$(rockspec_pl)' rockspec.in > rockspec/lua-csnappy-$(VERSION)-$(REV).rockspec
 
+rock:
+	luarocks pack rockspec/lua-csnappy-$(VERSION)-$(REV).rockspec
+
 check: test
 
 test:
 	prove --exec=$(LUA) ./test/*.t
+
+luacheck:
+	luacheck --std=min --config .test.luacheckrc test/*.t
 
 coveralls:
 	rm -f luacov.stats.out luacov.report.out

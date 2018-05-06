@@ -26,7 +26,7 @@ and the sources are [hosted at http://github.com/fperrad/lua-csnappy/](hosted at
 Copyright and License
 ---------------------
 
-Copyright (c) 2012-2014 Francois Perrad
+Copyright (c) 2012-2015 Francois Perrad
 
 This library is licensed under the terms of the BSD license, like csnappy & Snappy.
 
