@@ -1,5 +1,5 @@
 /*
- * lua-csnappy : <http://fperrad.github.com/lua-csnappy/>
+ * lua-csnappy : <http://fperrad.github.io/lua-csnappy/>
  */
 
 #include "lua.h"
@@ -20,7 +20,7 @@ static int lsnappy_compress(lua_State *L)
     if (working_memory != NULL) {
         char* dest = alloc(ud, NULL, 0, dest_max);
         if (dest != NULL) {
-            size_t dest_len;
+            uint32_t dest_len;
             csnappy_compress(src, src_len, dest, &dest_len, working_memory, CSNAPPY_WORKMEM_BYTES_POWER_OF_TWO);
             lua_pushlstring(L, dest, dest_len);
             /* freeing */
@@ -38,9 +38,9 @@ static int lsnappy_compress(lua_State *L)
 static int lsnappy_decompress(lua_State *L)
 {
     size_t src_len;
-    size_t dest_len;
+    uint32_t dest_len;
     const char* src = luaL_checklstring(L, 1, &src_len);
-    int header_len = csnappy_get_uncompressed_length(src, src_len, &dest_len);
+    int header_len = csnappy_get_uncompressed_length(src, (uint32_t)src_len, &dest_len);
     if (header_len != CSNAPPY_E_HEADER_BAD) {
         if (dest_len == 0) {
             lua_pushlstring(L, "", 0);
@@ -99,7 +99,7 @@ LUALIB_API int luaopen_snappy(lua_State *L)
     lua_setfield(L, -2, "_COPYRIGHT");
     lua_pushliteral (L, "lua-csnappy: a fast compressor/decompressor");
     lua_setfield(L, -2, "_DESCRIPTION");
-    lua_pushliteral (L, "0.1.0");
+    lua_pushliteral (L, "0.1.1");
     lua_setfield(L, -2, "_VERSION");
     return 1;
 }

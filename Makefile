@@ -12,16 +12,16 @@ VERSION := $(shell perl -e '$(version_pl)' < lsnappy.c)
 TARBALL := lua-csnappy-$(VERSION).tar.gz
 REV     := 1
 
-INCS    :=
-DEFS    :=
-WARN    := -Wall -pedantic
-CFLAGS  := $(INCS) $(DEFS) $(WARN) -O2 -fPIC
-
 LUAVER  := 5.1
 PREFIX  := /usr/local
 DPREFIX := $(DESTDIR)$(PREFIX)
 LIBDIR  := $(DPREFIX)/lib/lua/$(LUAVER)
 INSTALL := install
+
+INCS    := -I /usr/include/lua$(LUAVER)
+DEFS    :=
+WARN    := -Wall -pedantic
+CFLAGS  := $(INCS) $(DEFS) $(WARN) -O2 -fPIC
 
 all: snappy.so
 
@@ -45,6 +45,7 @@ use warnings; \
 my @files = qw{ \
     MANIFEST \
     csnappy/csnappy.h \
+    csnappy/csnappy_compat.h \
     csnappy/csnappy_internal.h \
     csnappy/csnappy_internal_userspace.h \
     csnappy/csnappy_compress.c \

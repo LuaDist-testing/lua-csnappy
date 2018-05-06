@@ -4,6 +4,7 @@ MANIFEST
 Makefile
 README.md
 csnappy/csnappy.h
+csnappy/csnappy_compat.h
 csnappy/csnappy_compress.c
 csnappy/csnappy_decompress.c
 csnappy/csnappy_internal.h

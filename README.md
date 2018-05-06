@@ -2,6 +2,8 @@
 lua-csnappy
 ===========
 
+[![Build Status](https://travis-ci.org/fperrad/lua-csnappy.png)](https://travis-ci.org/fperrad/lua-csnappy)
+
 Introduction
 ------------
 
@@ -16,13 +18,13 @@ The specification and the original C++ implementation of Snappy are available at
 Links
 -----
 
-The homepage is at [http://fperrad.github.com/lua-csnappy/](http://fperrad.github.com/lua-csnappy/),
+The homepage is at [http://fperrad.github.io/lua-csnappy/](http://fperrad.github.io/lua-csnappy/),
 and the sources are [hosted at http://github.com/fperrad/lua-csnappy/](hosted at http://github.com/fperrad/lua-csnappy/).
 
 Copyright and License
 ---------------------
 
-Copyright (c) 2012 Francois Perrad
+Copyright (c) 2012-2013 Francois Perrad
 
 This library is licensed under the terms of the BSD license, like csnappy & Snappy.
 
