@@ -3,6 +3,8 @@ lua-csnappy
 ===========
 
 [![Build Status](https://travis-ci.org/fperrad/lua-csnappy.png)](https://travis-ci.org/fperrad/lua-csnappy)
+[![Coverage Status](https://coveralls.io/repos/fperrad/lua-csnappy/badge.png?branch=master)](https://coveralls.io/r/fperrad/lua-csnappy?branch=master)
+[![Licence](http://img.shields.io/badge/Licence-MIT-brightgreen.svg)](COPYRIGHT)
 
 Introduction
 ------------
@@ -24,7 +26,7 @@ and the sources are [hosted at http://github.com/fperrad/lua-csnappy/](hosted at
 Copyright and License
 ---------------------
 
-Copyright (c) 2012-2013 Francois Perrad
+Copyright (c) 2012-2014 Francois Perrad
 
 This library is licensed under the terms of the BSD license, like csnappy & Snappy.
 

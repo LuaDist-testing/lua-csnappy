@@ -21,7 +21,8 @@ INSTALL := install
 INCS    := -I /usr/include/lua$(LUAVER)
 DEFS    :=
 WARN    := -Wall -pedantic
-CFLAGS  := $(INCS) $(DEFS) $(WARN) -O2 -fPIC
+CFLAGS  := $(INCS) $(DEFS) $(WARN) -O2 -fPIC $(GCOVFLAGS)
+LDFLAGS := -shared
 
 all: snappy.so
 
@@ -31,7 +32,7 @@ csnappy/csnappy_compress.c csnappy/csnappy_decompress.c:
 lsnappy.o: csnappy/csnappy_compress.c csnappy/csnappy_decompress.c
 
 snappy.so: lsnappy.o
-	$(CC) -o $@ -shared $<
+	$(CC) $(LDFLAGS) -o $@ $<
 
 install:
 	$(INSTALL) -m 755 -D snappy.so          $(LIBDIR)/snappy.so
@@ -112,6 +113,12 @@ check: test
 
 test:
 	prove --exec=$(LUA) ./test/*.t
+
+coveralls:
+	rm -f luacov.stats.out luacov.report.out
+	-prove --exec="$(LUA) -lluacov" ./test/*.t
+	coveralls -b . -r . -e luarocks -e csnappy --dump c.report.json
+	luacov-coveralls -j c.report.json -v -e ^/usr -e %.t$
 
 README.html: README.md
 	Markdown.pl README.md > README.html

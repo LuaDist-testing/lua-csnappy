@@ -34,6 +34,6 @@ for i = 0, 15 do
     input = string.rep('0', len)
     compressed = snappy.compress(input)
     decompressed = snappy.decompress(compressed)
-    is(decompressed, input, "length: " .. len)
+    is(decompressed, input, "length: " .. tostring(len))
     len = len * 3
 end
