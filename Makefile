@@ -12,7 +12,7 @@ VERSION := $(shell perl -e '$(version_pl)' < lsnappy.c)
 TARBALL := lua-csnappy-$(VERSION).tar.gz
 REV     := 1
 
-LUAVER  := 5.1
+LUAVER  := 5.3
 PREFIX  := /usr/local
 DPREFIX := $(DESTDIR)$(PREFIX)
 LIBDIR  := $(DPREFIX)/lib/lua/$(LUAVER)
@@ -55,6 +55,7 @@ my @files = qw{ \
 while (<>) { \
     chomp; \
     next if m{^\.}; \
+    next if m{^debian/}; \
     next if m{^rockspec/}; \
     next if m{^csnappy$$}; \
     push @files, $$_; \
@@ -105,6 +106,14 @@ rockspec: $(TARBALL)
 rock:
 	luarocks pack rockspec/lua-csnappy-$(VERSION)-$(REV).rockspec
 
+deb:
+	echo "lua-csnappy ($(shell git describe --dirty)) unstable; urgency=medium" >  debian/changelog
+	echo ""                         >> debian/changelog
+	echo "  * UNRELEASED"           >> debian/changelog
+	echo ""                         >> debian/changelog
+	echo " -- $(shell git config --get user.name) <$(shell git config --get user.email)>  $(shell date -R)" >> debian/changelog
+	fakeroot debian/rules clean binary
+
 check: test
 
 test:
@@ -117,7 +126,7 @@ coveralls:
 	rm -f luacov.stats.out luacov.report.out
 	-prove --exec="$(LUA) -lluacov" ./test/*.t
 	coveralls -b . -r . -e luarocks -e csnappy --dump c.report.json
-	luacov-coveralls -j c.report.json -v -e ^/usr -e %.t$
+	luacov-coveralls -j c.report.json -v -e /HERE/ -e %.t$
 
 README.html: README.md
 	Markdown.pl README.md > README.html
@@ -130,5 +139,5 @@ clean:
 
 realclean: clean
 
-.PHONY: test rockspec CHANGES
+.PHONY: test rockspec deb CHANGES
 
