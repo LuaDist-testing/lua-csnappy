@@ -1,0 +1,9 @@
+site_name: lua-csnappy
+site_description: a fast compressor/decompressor
+site_author: François Perrad
+repo_url: https://github.com/fperrad/lua-csnappy
+pages:
+- Home: index.md
+- API: csnappy.md
+theme: mkdocs
+copyright: Copyright &copy; 2012-2016 Fran&ccedil;ois Perrad
