@@ -1,15 +1,15 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = 'lua-csnappy'
-version = '0.1.5-1'
+version = '0.1.5-2'
 -- LuaDist source
 source = {
-  tag = "0.1.5-1",
-  url = "git://github.com/LuaDist-testing/lua-csnappy.git"
+  url = "git://github.com/LuaDist-testing/lua-csnappy.git",
+  tag = "0.1.5-2"
 }
 -- Original source
 -- source = {
---     url = 'http://github.com/fperrad/lua-csnappy/raw/releases/lua-csnappy-0.1.5.tar.gz',
+--     url = 'https://framagit.org/fperrad/lua-csnappy/raw/releases/lua-csnappy-0.1.5.tar.gz',
 --     md5 = '6326474b2faa1e7a8335145b9ba0c105',
 --     dir = 'lua-csnappy-0.1.5',
 -- }
@@ -18,7 +18,7 @@ description = {
     detailed = [[
         lua-csnappy is a binding of the csnappy library which implements the Google's Snappy (de)compressor.
     ]],
-    homepage = 'http://fperrad.github.io/lua-csnappy/',
+    homepage = 'http://fperrad.frama.io/lua-csnappy/',
     maintainer = 'Francois Perrad',
     license = 'BSD'
 }
